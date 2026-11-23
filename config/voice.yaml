@@ -1,0 +1,14 @@
+# 节点 I 的模型与参数（说明书第 11 节）。
+# 模型目录相对仓库根目录。CPU 上 int8 量化。下载说明见 docs/weights.md。
+# paraformer（中英双语）识别更准，但 sherpa-onnx 2.0.1 的 paraformer 接口
+# 不支持热词偏置；transducer（zipformer-zh）支持，热词文件由 vocab.yaml 生成。
+# 切换 asr_type 后要重跑 voice.py --roundtrip 对照。
+
+asr_type: paraformer    # paraformer 或 transducer
+asr_dir: models/asr-paraformer-zh-en
+asr_transducer_dir: models/asr-zipformer-zh-14m
+asr_quant: int8
+tts_dir: models/tts-melo-zh_en
+hotwords_score: 1.5
+sample_rate: 16000
+num_threads: 2

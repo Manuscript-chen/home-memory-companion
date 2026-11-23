@@ -1,0 +1,67 @@
+# 家庭视觉记忆与语音陪伴系统
+# 这些文件留在自己电脑上，不要 git add。
+
+# --- Python 缓存、虚拟环境、打包 ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- 编辑器和系统文件 ---
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- 模型权重（体积大，用下载说明重新取得）---
+# 见 docs/weights.md
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.mlmodel
+*.safetensors
+mobileclip*.ts
+models/*
+!models/README.md
+
+# --- 安装包、压缩包（例如 go2rtc 的 Windows 包）---
+*.zip
+*.7z
+*.rar
+*.exe
+*.msi
+*.whl
+
+# --- 运行时数据：数据库、证据照片、语音试听 ---
+# 程序会自己创建 data/。证据 jpg 超过 72 小时由程序删除，事件行留在库里。
+data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.wav
+
+# --- 实验产物（脚本在 experiments/，输出不要提交）---
+experiments/results/
+experiments/runs/
+experiments/web/
+论文/
+
+# --- 密钥和本机配置副本 ---
+.env
+*.local.yaml

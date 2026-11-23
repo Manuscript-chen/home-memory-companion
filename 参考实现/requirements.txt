@@ -1,8 +1,0 @@
-pyyaml
-opencv-python
-ultralytics
-sherpa-onnx
-pypinyin
-sqlite-vec
-sentence-transformers
-sounddevice
