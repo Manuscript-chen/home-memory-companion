@@ -1,0 +1,33 @@
+# 家庭视觉记忆与语音陪伴系统
+#
+# 计划书点了这些库的名字，除 sherpa-onnx 外没有点版本。
+# 下面未写版本号的包，装「当前能装上的稳定版」即可，不在这里猜一个版本号。
+# Python 用 3.11、3.12 或 3.13。不要和 Home Assistant 的 Python 3.14 装在一起。
+#
+# 安装：python -m pip install -r requirements.txt
+
+pyyaml
+opencv-python
+numpy
+
+# 开放词汇检测 YOLOE-26n。会顺带装上 torch，体积较大。
+ultralytics
+
+# 计划书采用的版本是 2.0.1（节点 I）。
+sherpa-onnx==2.0.1
+
+# 语音回环要把合成器的 44.1 kHz 转到识别器用的 16 kHz。
+scipy
+
+# 节点 I 按键录音。没有麦克风也可以先跑 python demo/run_demo.py。
+sounddevice
+
+# 下面两项只服务备用路径，不跑向量召回或拼音近邻时可以先不装。
+# 节点 H 的拼音近邻（qa/pinyin_backup.py，默认不进 ask.py）。
+pypinyin
+# 节点 H2 的向量召回（qa/vec_memory.py）。计划书的主路径不使用向量库。
+sqlite-vec
+sentence-transformers
+
+# 只在运行 experiments/write_paper.py 时需要：
+# python-docx
