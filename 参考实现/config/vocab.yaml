@@ -1,0 +1,39 @@
+slots:
+  - id: entry.cabinet.top
+    canonical_name: 玄关柜
+    aliases: [玄关柜, 进门的柜子, 门口柜子]
+  - id: living.coffee.top
+    canonical_name: 茶几垫
+    aliases: [茶几垫, 茶几, 客厅矮桌]
+  - id: dining.table.top
+    canonical_name: 餐桌垫
+    aliases: [餐桌垫, 餐桌, 饭桌]
+
+objects:
+  - id: keys
+    prompt: keys
+    canonical_name: 钥匙
+    aliases: [钥匙, 钥匙串, 家门钥匙]
+    short_side_m: 0.02
+  - id: glasses_case
+    prompt: eyeglasses case
+    canonical_name: 眼镜盒
+    aliases: [眼镜盒, 老花镜盒子, 眼镜盒子, 看报纸的眼镜]
+    short_side_m: 0.05
+  - id: medicine_box
+    prompt: medicine box
+    canonical_name: 药盒
+    aliases: [药盒, 药箱, 吃药的盒子]
+    short_side_m: 0.05
+  # 下面两件留在口述词表。遥控器在茶几、检测输入 640 时有效像素不足 32。
+  # 医保卡短边够 32，但餐桌这一路已经绑定药盒，首版一路只检测一个类别。
+  - id: remote_control
+    prompt: remote control
+    canonical_name: 遥控器
+    aliases: [遥控器, 遥控板, 电视遥控器]
+    short_side_m: 0.04
+  - id: insurance_card
+    prompt: insurance card
+    canonical_name: 医保卡
+    aliases: [医保卡, 社保卡, 医疗卡]
+    short_side_m: 0.054

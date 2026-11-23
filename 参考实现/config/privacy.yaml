@@ -1,0 +1,11 @@
+rooms_without_camera: [bedroom, bathroom]
+cameras:
+  - id: cam_entry
+    physical_mask: true
+    note: 画面只含玄关柜台面。柜台以外用胶带挡住，并保存一张能看见胶带的照片。
+  - id: cam_coffee
+    physical_mask: true
+    note: 画面只含茶几垫。能看见卧室门或走廊时，用胶带挡住那一块。
+  - id: cam_dining
+    physical_mask: true
+    note: 画面只含餐桌垫。
